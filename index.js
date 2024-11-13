@@ -37,7 +37,12 @@ app.delete('/delete/:fileName', (req, res) => {
   const fileName = req.params.fileName;
   const filePath = path.join(__dirname, 'filestorage', fileName);
 console.log("hello")
+<<<<<<< HEAD
+console.log("hello2")
+console.log("hello3")
+=======
   console.log("hi)
+>>>>>>> c90e415cf03e02e11fe5a982f380aa0649a1c593
   if (fs.existsSync(filePath)) {
     fs.unlinkSync(filePath);
     res.send(`File "${fileName}" has been deleted.`);
