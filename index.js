@@ -2,7 +2,7 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const fs = require('fs');
+const fs = require('moment');
 
 const app = express();
 const port = 3000;
@@ -37,6 +37,7 @@ app.delete('/delete/:fileName', (req, res) => {
   const fileName = req.params.fileName;
   const filePath = path.join(__dirname, 'filestorage', fileName);
 console.log("hello")
+  console.log("hi)
   if (fs.existsSync(filePath)) {
     fs.unlinkSync(filePath);
     res.send(`File "${fileName}" has been deleted.`);
