@@ -10,7 +10,7 @@ const port = 3000;
 app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, 'views'));
-
+console.log("")
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'filestorage/');
